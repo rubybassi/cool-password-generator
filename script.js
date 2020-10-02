@@ -10,32 +10,34 @@ var generateBtn = document.querySelector("#generate");
 // Write validation function which outputs error message if min or max of userLength is violated
 function validateLength() {
   var errorMessage1 = document.querySelector("#lengthError");
-  if (this.checkValidity() === false || this.value == "") { // NEED TO WRITE CONDITION IF NULL
+  if (this.checkValidity() === false || this.value === "") { // NEED TO WRITE CONDITION IF NULL
     errorMessage1.innerHTML = "Password length cannot be empty and must be between 8-128";
-   // console.log("did not select correct value");
+    // console.log("did not select correct value");
   } else {
     errorMessage1.innerHTML = "";
-  //  console.log("selected correct value");
+    // console.log("selected correct value");
   }
 }
 // Generate length validation function
 userLength.addEventListener("blur", validateLength);
 
 
-
 // Write validation function to check if at least one input is selected
 function validateSelection() {
-    if (!document.getElementById("upper").checked) {
-      var errorMessage2 = document.querySelector("#selectionError");
-      // alert("pleast tick atleast one"); 
-      //console.log("did not select upper");
-    } else {
-     //console.log("did select upper");
-      errorMessage2 = "";
-    }
-  };
+  var errorMessage2 = document.querySelector("#selectionError");
+  var checked = document.querySelectorAll('input:checked');
+  if (checked.length === 0) {
+    errorMessage2.innerHTML = "You must select at least one character type";
+    console.log('no checkboxes checked');
+  } else {
+    errorMessage2.innerHTML = "";
+    console.log(checked.length + 'checkboxes checked');
+  }
+}
 // Generate length validation function
 generateBtn.addEventListener("click", validateSelection);
+
+
 
 /*
 
