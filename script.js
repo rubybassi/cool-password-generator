@@ -10,7 +10,7 @@ var generateBtn = document.querySelector("#generate");
 // Write validation function which outputs error message if min or max of userLength is violated
 function validateLength() {
   var errorMessage1 = document.querySelector("#lengthError");
-  if (this.checkValidity() === false || this.value === "") { // NEED TO WRITE CONDITION IF NULL
+  if (userLength.checkValidity() === false || userLength.value === "") { // NEED TO WRITE CONDITION IF NULL
     errorMessage1.innerHTML = "Password length cannot be empty and must be between 8-128";
     // console.log("did not select correct value");
   } else {
@@ -19,8 +19,8 @@ function validateLength() {
   }
 }
 // Generate length validation function
-userLength.addEventListener("blur", validateLength);
-
+//userLength.addEventListener("blur", validateLength);
+generateBtn.addEventListener("click", validateLength);
 
 // Write validation function to check if at least one input is selected
 function validateSelection() {
