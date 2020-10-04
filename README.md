@@ -8,7 +8,7 @@ This project is my attempt of creating a random password generator application. 
 
 [View my final project on GitHub pages](https://rubybassi.github.io/cool-password-generator/)
 
-![My Responsive Random Password Generator](images/my-password-generator.png)
+![My Responsive Random Password Generator](my-password-generator.png)
 
 If you have feedback, please feel free to drop me a comment.
 
@@ -40,7 +40,7 @@ If you have feedback, please feel free to drop me a comment.
 
 The following image was provided to demonstrate what the web application's layout should resemble, although there was room for customisation:
 
-![End Game Mock Up](images/mockup.png)
+![End Game Mock Up](mockup.png)
 
 ### My Development Enviromment:
 * [Visual Studio Code](https://code.visualstudio.com/)
