@@ -10,6 +10,8 @@ This project is my attempt of creating a random password generator application. 
 
 ![My Responsive Random Password Generator](img/my-password-generator.png)
 
+[![Demo](https://j.gifs.com/E8jmPl.gif)](https://www.youtube.com/watch?v=Z2ia15zoDkI&feature=youtu.be)
+
 If you have feedback, please feel free to drop me a comment.
 
 ### User Story
