@@ -24,7 +24,7 @@ If you have feedback, please feel free to drop me a comment.
 > WHEN I click the button to generate a password
 > THEN I am presented with a series of prompts for password criteria
 > WHEN prompted for password criteria
->THEN I select which criteria to include in the password
+> THEN I select which criteria to include in the password
 > WHEN prompted for the length of the password
 > THEN I choose a length of at least 8 characters and no more than 128 characters
 > WHEN prompted for character types to include in the password
@@ -40,7 +40,7 @@ If you have feedback, please feel free to drop me a comment.
 
 The following image was provided to demonstrate what the web application's layout should resemble, although there was room for customisation:
 
-![End Game Mock Up](mockup.png)
+![End Game Mock Up](pwd-mockup.png)
 
 ### My Development Enviromment:
 * [Visual Studio Code](https://code.visualstudio.com/)
