@@ -2,7 +2,6 @@
 var generateBtn = document.querySelector("#generate");
 var userLength = document.querySelector("#length");
 
-
 // Write validation function which outputs error message if min or max of userLength is violated
 function validateLength() {
   var errorMessage1 = document.querySelector("#lengthError");
@@ -17,7 +16,6 @@ function validateLength() {
   }
 }
 
-
 // Write validation function to check if at least one character input is selected
 function validateSelection() {
   var errorMessage2 = document.querySelector("#selectionError");
@@ -28,11 +26,10 @@ function validateSelection() {
    return false;
   } else {
     errorMessage2.innerHTML = "";
-  //  console.log(checked.length + 'checkboxes checked');
+  // console.log(checked.length + 'checkboxes checked');
    return true;
   }
 }
-
 
 // Declare variables for character sets
 var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -49,7 +46,7 @@ function generatePassword() {
   var userNumber = document.querySelector("#number").checked;
   var userSpecial = document.querySelector("#special").checked;
 
-// Check to see if character set selected and append to new string 
+// Check to see if character set selected and if true append to new string 
   var possibleCharacters = "";
   if (userLower) {
     possibleCharacters += lower; 
@@ -66,11 +63,11 @@ function generatePassword() {
   //console.log(possibleCharacters); //check characters
   //console.log(possibleCharacters.length); //check length
   
-// loop the string to get random characters equal to the user inputted length
+// Loop the string to get random characters equal to the user inputted length
   var randomSelection = "";
   for (var i = 0; i < length; i++) {
-      randomSelection += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
-      //console.log(randomSelection);
+    randomSelection += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
+    //console.log(randomSelection);
     }
   return randomSelection;
 }
@@ -80,11 +77,11 @@ function generatePassword() {
 function writePassword() { 
   var lenghtIsValid = validateLength(); // calls and checks function's boolean value
   var selectionIsValid = validateSelection(); // calls and checks function's boolean value
-  if (lenghtIsValid && selectionIsValid) {
+  if (lenghtIsValid && selectionIsValid) { // will only write password if both validations are true, else do nothing
       var password = generatePassword(); 
       var passwordText = document.querySelector("#password");
-       passwordText.value = password;
+      passwordText.value = password;
   } 
 }
-// Add event listener to generate button and trigger function
+// Add event listener to generate button and trigger external function
 generateBtn.addEventListener("click", writePassword);
