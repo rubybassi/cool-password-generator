@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>Cool Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,11 +13,9 @@
         <h1>Password Generator</h1>
         <p>Please select the password length and the character types you would like to be included in your new password.</p>
       </header>
-      <div class="card">
-        <div class="card-header">
+      <main class="card">
+        <section class="card-header">
           <h2>Generate a Password</h2>
-        </div>
-        <div>
           <form>
             <!--add input for user length-->
             <label for="length">Length of password (between 8 and 128):</label>
@@ -35,16 +33,20 @@
             <label for="special">Include special characters</label>
             <input type="checkbox" id="special" name="checkbox"><br /> 
           </form>
-        </div>
-        <div class="card-body">
-          <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-        <p id="lengthError"></p>
-        <p id="selectionError"></p>  
-      </div>
+        </section>
+        <section>
+          <div class="card-body">
+            <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="generate" class="btn">Generate Password</button>
+          </div>
+          <div class="cardResponse">
+            <p id="lengthError"></p>
+            <p id="selectionError"></p>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="script.js"></script>
   </body>
